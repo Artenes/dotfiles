@@ -124,7 +124,7 @@ function intersect() {
 alias st='git status'
 alias ad='git add $@'
 alias ada='git add .'
-alias di='git diff --word-diff $@'
+alias di='git diff $@'
 alias co='git commit -m $@'
 alias com='git commit'
 alias pus='git push'
@@ -141,3 +141,6 @@ alias pick='git cherry-pick $@ -x'
 alias pickm='git cherry-pick $@ -x -m 1'
 alias pickok='git cherry-pick --continue'
 alias show='git show $@'
+
+#this code shows the author who created files in the current branch, you can change the Test.java part to anything you like to filter the files, is a regular expression
+#git log --author="Artenes Junior Gomes Nogueira" --name-status --diff-filter=A --format='> %aN' | awk '/^>/ {tagline=$0} /^A\t/ && /\Test.java$/ {print tagline "\t" $0}'
