@@ -130,7 +130,7 @@ alias co='git commit -m $@'
 alias com='git commit'
 alias pus='git push'
 alias pul='git pull'
-alias lo='git log'
+alias lo='git log $@'
 alias ch='git checkout $@'
 alias rmb='git branch -D $@'
 alias stash='git stash -u'
@@ -145,6 +145,7 @@ alias show='git show $@'
 
 #android commands
 alias device:log='adb logcat -d > /tmp/android-dump.txt && subl /tmp/android-dump.txt'
+alias device:now='adb shell dumpsys window windows | grep -E '"'"'mCurrentFocus|mFocusedApp'"'"''
 
 #this code shows the author who created files in the current branch, you can change the Test.java part to anything you like to filter the files, is a regular expression
 #git log --author="Artenes Junior Gomes Nogueira" --name-status --diff-filter=A --format='> %aN' | awk '/^>/ {tagline=$0} /^A\t/ && /\Test.java$/ {print tagline "\t" $0}'
