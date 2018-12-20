@@ -57,7 +57,7 @@ function pusrem() {
 }
 
 function publish() {
-	CURRENT_DIR=pwd
+	CURRENT_DIR=`pwd`
 	cd ~/code/dotfiles && \
 	git add . && \
 	git commit -m "Added new aliases/functions" && \
