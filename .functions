@@ -55,3 +55,12 @@ function pusrem() {
   local branch_name=$(current_branch)
   git push -u origin $branch_name
 }
+
+function publish() {
+	CURRENT_DIR=pwd
+	cd ~/code/dotfiles && \
+	git add . && \
+	git commit -m "Added new aliases/functions" && \
+	git push && \
+	cd $CURRENT_DIR
+}
