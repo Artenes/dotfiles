@@ -48,7 +48,7 @@ alias egrep='egrep --color=auto'
 alias sudo='sudo '
 
 # Get week number
-alias week='date +%V'
+alias week='date +%V'	
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"

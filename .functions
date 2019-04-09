@@ -77,3 +77,10 @@ function device:bounds() {
 
 	adb shell setprop debug.layout "$NEW_VALUE" && adb shell service call activity 1599295570 &>/dev/null;
 }
+
+# Convert milliseconds to date
+function mill() {
+	#removes the last 3 zeros
+	TIME=$((${1}/1000))
+	date -d @${TIME} +"%d/%m/%Y %H:%M:%I"
+}
