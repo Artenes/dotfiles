@@ -64,3 +64,23 @@ function publish() {
 	git push && \
 	cd $CURRENT_DIR
 }
+
+function device:bounds() {
+	IS_ACTIVE=`adb shell getprop debug.layout`
+	
+	if [ "$IS_ACTIVE" = "true" ]
+	then
+		NEW_VALUE="false"
+	else
+		NEW_VALUE="true"
+	fi
+
+	adb shell setprop debug.layout "$NEW_VALUE" && adb shell service call activity 1599295570 &>/dev/null;
+}
+
+# Convert milliseconds to date
+function mill() {
+	#removes the last 3 zeros
+	TIME=$((${1}/1000))
+	date -d @${TIME} +"%d/%m/%Y %H:%M:%I"
+}
