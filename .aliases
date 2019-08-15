@@ -15,6 +15,7 @@ alias desktop="cd ~/Desktop"
 alias code="cd ~/code"
 alias aliases="subl ~/code/dotfiles/.aliases"
 alias functions="subl ~/code/dotfiles/.functions"
+alias extras="subl ~/.extra"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
