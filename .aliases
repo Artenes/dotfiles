@@ -12,7 +12,7 @@ alias home="cd ~"
 # Shortcuts
 alias downloads="cd ~/Downloads"
 alias desktop="cd ~/Desktop"
-alias code="cd ~/code"
+alias codedir="cd ~/code"
 # removed due to incompability between sublime and zshell
 # alias aliases="subl ~/code/dotfiles/.aliases"
 # alias functions="subl ~/code/dotfiles/.functions"
