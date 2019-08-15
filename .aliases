@@ -13,9 +13,10 @@ alias home="cd ~"
 alias downloads="cd ~/Downloads"
 alias desktop="cd ~/Desktop"
 alias code="cd ~/code"
-alias aliases="subl ~/code/dotfiles/.aliases"
-alias functions="subl ~/code/dotfiles/.functions"
-alias extras="subl ~/.extra"
+# removed due to incompability between sublime and zshell
+# alias aliases="subl ~/code/dotfiles/.aliases"
+# alias functions="subl ~/code/dotfiles/.functions"
+# alias extras="subl ~/.extra"
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
