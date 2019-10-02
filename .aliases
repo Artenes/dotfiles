@@ -27,7 +27,7 @@ else # macOS `ls`
 fi
 
 # List all files colorized in long format
-alias l="ls -lF ${colorflag}"
+alias l="ls -lF ${colorflag} -a"
 
 # List all files colorized in long format, excluding . and ..
 alias la="ls -lAF ${colorflag}"
@@ -147,6 +147,8 @@ alias show='git show $@'
 #android commands
 alias device:log='adb logcat -d > /tmp/android-dump.txt && subl /tmp/android-dump.txt'
 alias device:now='adb shell dumpsys window windows | grep -E '"'"'mCurrentFocus|mFocusedApp'"'"''
+alias device:low='adb shell am broadcast -a android.intent.action.BATTERY_LOW'
+alias monitor='$ANDROID_HOME/tools/monitor &'
 alias free="sudo rm /var/log/syslog.1"
 
 #this code shows the author who created files in the current branch, you can change the Test.java part to anything you like to filter the files, is a regular expression
